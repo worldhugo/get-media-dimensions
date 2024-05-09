@@ -32,8 +32,8 @@ async function getVideoDimensions (urlOrFilename) {
   }
 
   return Math.abs(rotation % 180) === 90
-    ? { width: height, height: width, duration: parseFloat(duration) }
-    : { width, height, duration: parseFloat(duration) };
+    ? { width: height, height: width, duration: parseFloat(duration), stream : stream }
+    : { width, height, duration: parseFloat(duration), stream : stream };
 }
 
 module.exports = getVideoDimensions;
